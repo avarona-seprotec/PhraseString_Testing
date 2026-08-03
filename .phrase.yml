@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 phrase:
   project_id: "c82889bdf73013f4d77c664e5abdb1ec"      # desde Project Settings > API
   file_format: "html"             					  # ajústalo a tu stack
@@ -9,3 +10,16 @@ phrase:
   pull:                                               # ← lo consume el botón EXPORT (Phrase → repo)
     targets:
       - file: "./locales/Frutería_index.html"
+=======
+phrase:
+  project_id: "c82889bdf73013f4d77c664e5abdb1ec"      # desde Project Settings > API
+  file_format: "html"             					  # ajústalo a tu stack
+  push:                                               # ← lo consume el botón IMPORT (repo → Phrase)
+    sources:
+      - file: "./locales/<locale_name>.html"
+        params:
+          update_translations: false                  # NO pisar traducciones de Phrase con el repo
+  pull:                                               # ← lo consume el botón EXPORT (Phrase → repo)
+    targets:
+      - file: "./locales/<locale_name>.html"
+>>>>>>> 15d7c5c8f16eb1786a99aae6cfa7be00a35310c5
