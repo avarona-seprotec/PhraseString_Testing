@@ -3,10 +3,9 @@ phrase:
   file_format: "html"             					  # ajústalo a tu stack
   push:                                               # ← lo consume el botón IMPORT (repo → Phrase)
     sources:
-      - file: "./es/Frutería_index.html"
+      - file: "./es/<locale_name>.html"
         params:
           update_translations: false                  # NO pisar traducciones de Phrase con el repo
   pull:                                               # ← lo consume el botón EXPORT (Phrase → repo)
     targets:
-      - file: "./en/Frutería_index.html"
-
+      - file: "./en/<locale_name>.html"
