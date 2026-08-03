@@ -1,11 +1,18 @@
 phrase:
-  project_id: "c82889bdf73013f4d77c664e5abdb1ec"      # desde Project Settings > API
-  file_format: "html"             					  # ajústalo a tu stack
-  push:                                               # ← lo consume el botón IMPORT (repo → Phrase)
+  project_id: "c82889bdf73013f4d77c664e5abdb1ec"
+  file_format: "html"
+
+  push:                                                     # Import (repo → Phrase)
     sources:
-      - file: "./es/<locale_name>.html"
+      - file: "./PhraseString_Testing/es/Frutería_index.html"
         params:
-          update_translations: false                  # NO pisar traducciones de Phrase con el repo
-  pull:                                               # ← lo consume el botón EXPORT (Phrase → repo)
+          locale_id: "es"                                   # source/default
+          update_translations: false
+
+  pull:                                                     # Export (Phrase → repo)
     targets:
-      - file: "./en/<locale_name>.html"
+      - file: "./PhraseString_Testing/en/Frutería_index.html"
+        params:
+          locale_id: "en"                                   # SOLO en; es no se exporta nunca
+          # format_options:
+          #   document_id: "..."                            # ver nota
