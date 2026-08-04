@@ -4,14 +4,14 @@ phrase:
 
   push:                                                     # Import (repo → Phrase)
     sources:
-      - file: "./PhraseString_Testing/es/Frutería_index.html"
+      - file: "./es/Frutería_index.html"
         params:
           locale_id: "es"                                   # source/default
           update_translations: false
 
   pull:                                                     # Export (Phrase → repo)
     targets:
-      - file: "./PhraseString_Testing/en/Frutería_index.html"
+      - file: "./en/Frutería_index.html"
         params:
           locale_id: "en"                                   # SOLO en; es no se exporta nunca
           # format_options:
