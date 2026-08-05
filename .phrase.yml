@@ -14,5 +14,5 @@ phrase:
       - file: "./en/*.html"
         params:
           locale_id: "en"                                   # SOLO en; es no se exporta nunca
-           format_options:
-             document_id: "bc5dcb2461d9296a668f8f6efb49b874"                             # ver nota
+            format_options:
+              document_id: "bc5dcb2461d9296a668f8f6efb49b874"                             # ver nota
