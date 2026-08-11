@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Huerta de Carmen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #f5f3ee;
+      color: #1a1a1a;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+    }
+
+    .header .tagline {
+      font-size: 14px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: #3B6D11;
+      margin: 12px auto;
+      border-radius: 2px;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .divider-sec {
+      height: 2px;
+      width: 36px;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .verduras .divider-sec { background: #3B6D11; }
+    .frutas   .divider-sec { background: #B85C00; }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+    }
+
+    /* Cards */
+    .card {
+      background: #fff;
+      border: 0.5px solid rgba(0,0,0,0.12);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover {
+      border-color: rgba(0,0,0,0.25);
+    }
+
+    .card-emoji { font-size: 28px; line-height: 1; }
+    .card-name  { font-weight: 700; font-size: 15px; color: #1a1a1a; margin-top: 2px; }
+    .card-desc  { font-size: 13px; color: #555; line-height: 1.5; flex: 1; }
+
+    .frutas   .card-price { color: #B85C00; }
+    .verduras .card-price { color: #3B6D11; }
+
+    .card-price {
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="header">
+      <h1>La Huerta de Carmen</h1>
+      <div class="divider"></div>
+      <p class="tagline">Producto fresco del campo a tu mesa</p>
+    </header>
+
+    <!-- FRUTAS -->
+    <section class="section frutas">
+      <h2 class="section-title"><span>🍑</span> Frutas</h2>
+      <div class="divider-sec"></div>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-emoji">🍓</div>
+          <div class="card-name">Fresas de Huelva</div>
+          <div class="card-desc">Dulces y aromáticas. Recogidas esta mañana. Ideales para postres o mermelada casera.</div>
+          <div class="card-price">3,50 € / kg</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🍊</div>
+          <div class="card-name">Naranjas valencianas</div>
+          <div class="card-desc">Zumo abundante y piel fina. Variedad Navel, perfecta para zumo o comer al natural.</div>
+          <div class="card-price">1,80 € / kg</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🍋</div>
+          <div class="card-name">Limones de Murcia</div>
+          <div class="card-desc">Muy ácidos y jugosos. Sin cera. Perfectos para aliñar, repostería o infusiones.</div>
+          <div class="card-price">1,20 € / kg</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🍇</div>
+          <div class="card-name">Uvas moscatel</div>
+          <div class="card-desc">Racimos grandes con sabor intenso a moscatel. Sin pepitas. Temporada de verano.</div>
+          <div class="card-price">2,90 € / kg</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🍑</div>
+          <div class="card-name">Melocotones de Calanda</div>
+          <div class="card-desc">Con denominación de origen. Pulpa firme y dulce. Recolectados en su punto óptimo.</div>
+          <div class="card-price">4,20 € / kg</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VERDURAS -->
+    <section class="section verduras">
+      <h2 class="section-title"><span>🥦</span> Verduras</h2>
+      <div class="divider-sec"></div>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-emoji">🍅</div>
+          <div class="card-name">Tomates de temporada</div>
+          <div class="card-desc">Madurados en planta al sol andaluz. Sabor intenso, ideales para ensaladas o gazpacho.</div>
+          <div class="card-price">2,10 € / kg</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🥦</div>
+          <div class="card-name">Brócoli ecológico</div>
+          <div class="card-desc">Cultivado sin pesticidas. Rico en vitamina C. Flores compactas y color verde intenso.</div>
+          <div class="card-price">1,90 € / ud.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🌶️</div>
+          <div class="card-name">Pimientos del Padrón</div>
+          <div class="card-desc">Unos pican y otros no. Perfectos para freír con sal gorda como tapa tradicional gallega.</div>
+          <div class="card-price">3,00 € / 250g</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🧅</div>
+          <div class="card-name">Cebollas moradas</div>
+          <div class="card-desc">Sabor suave y ligeramente dulce. Excelentes en ensaladas crudas o encurtidas en vinagre.</div>
+          <div class="card-price">1,00 € / kg</div>
+        </div>
+
+        <div class="card">
+          <div class="card-emoji">🥕</div>
+          <div class="card-name">Zanahorias baby</div>
+          <div class="card-desc">Tamaño pequeño, sabor más concentrado. Ideales para crudités, guisos o como snack saludable.</div>
+          <div class="card-price">1,50 € / 500g</div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">© 2026 La Huerta de Carmen · Todos los derechos reservados</footer>
+
+  </div>
+</body>
+</html>
