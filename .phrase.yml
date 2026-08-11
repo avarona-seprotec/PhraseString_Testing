@@ -10,3 +10,5 @@ phrase:
     - file: ./<locale_name>.html
       params:
         file_format: html
+            format_options:
+              document_id: "7968357ca3c34782464c85d478a73385"                             # ver nota
