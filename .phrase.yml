@@ -10,5 +10,6 @@ phrase:
     - file: ./<locale_name>.html
       params:
         file_format: html
-            format_options:
-              document_id: 7968357ca3c34782464c85d478a73385                             # ver nota
+        format_options:
+          # ID del documento HTML existente en el proyecto; obligatorio para exportar formatos basados en documento
+          document_id: 90963b30ac605b5c7c3240b8548afcb7
