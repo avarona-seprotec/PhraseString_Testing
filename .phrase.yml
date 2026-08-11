@@ -12,7 +12,7 @@ phrase:
   push:
     delete_unmentioned_keys: true       # remove keys from the project that are no longer in the source file
     sources:
-      - file: ./es/*.html
+      - file: "./es/*.html"
         params:
           locale_id: es                # source locale being pushed
           mark_reviewed: true          # mark uploaded translations as reviewed (requires review workflow)
@@ -20,7 +20,7 @@ phrase:
 
   pull:
     targets:
-      - file: ./locales/<locale_name>.html
+      - file: "./locales/<locale_name>.html"
         params:
           use_last_reviewed_version: true             # pull the last reviewed version, not just latest
           include_empty_translations: true            # includes also keys without translations
