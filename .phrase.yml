@@ -1,39 +1,12 @@
-# Sample .phrase.yml — Phrase Strings CLI configuration
-# Based on: https://support.phrase.com/hc/en-us/articles/5784093898908-Create-a-CLI-Configuration-File-Strings
-#
-# SECURITY: We highly recomment to never commit a real access_token. Provide it via the
-# PHRASE_ACCESS_TOKEN env var or the --access_token flag instead:
-#   export PHRASE_ACCESS_TOKEN="your-token-here"
-
 phrase:
-  file_format: html                      # default format; per-target override below
-  project_id: "c82889bdf73013f4d77c664e5abdb1ec"         # Project Settings -> API
-
+  project_id: c82889bdf73013f4d77c664e5abdb1ec
   push:
-    delete_unmentioned_keys: true       # remove keys from the project that are no longer in the source file
     sources:
-      - file: "./es/Frutería_index.html"
-        params:
-          locale_id: es                # source locale being pushed
-          mark_reviewed: true          # mark uploaded translations as reviewed (requires review workflow)
-          update_translations: true    # overwrite existing translations with file content
-
+    - file: ./<locale_name>.html
+      params:
+        file_format: html
   pull:
     targets:
-      - file: "./locales/en/Frutería_index.html.html"
-        params:
-          use_last_reviewed_version: true             # pull the last reviewed version, not just latest
-          include_empty_translations: true            # includes also keys without translations
-          exclude_empty_zero_forms: true              # skip empty plural zero-forms
-          tags: foo, bar                              # filter by tags
-          locale_ids: [en]                            # download multiple locales [en, de, it] in one call (array of IDs/names); only works with formats that support multiple locales
-          include_translated_keys: true               # combine with include_empty_translations to get only untranslated keys
-          include_unverified_translations: true       # set false to exclude unverified translations
-          fallback_locale_id: en                      # used when a key has no translation in this locale
-          use_locale_fallback: false                  # use the locale's own configured fallback instead (mutually exclusive with fallback_locale_id)
-          fallback_for_unverified_translations: false # also apply fallback to non-final (unverified/awaiting review) translations
-          translation_key_prefix: prefix_             # strip this prefix from key names on download
-          filter_by_prefix: true                      # only download keys matching translation_key_prefix
-          encoding: UTF-8                             # UTF-8, UTF-16 or ISO-8859-1
-          format_options:                             # format-specific rendering options, e.g. for XML/Java Properties/CSV
-            foo: bar
+    - file: ./<locale_name>.html
+      params:
+        file_format: html
