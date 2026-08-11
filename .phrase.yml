@@ -20,7 +20,7 @@ phrase:
 
   pull:
     targets:
-      - file: ./locales/<locale_name>.yml
+      - file: ./locales/<locale_name>.html
         params:
           use_last_reviewed_version: true             # pull the last reviewed version, not just latest
           include_empty_translations: true            # includes also keys without translations
